@@ -4,8 +4,16 @@
 	<title>EIKO v.3</title>
 	<style type="text/css">
 		body{
-			overflow: hidden;
+			overflow-x: hidden;
 			color: white;
+			font-family: sans-serif;
+		}
+		::-webkit-scrollbar{
+		  	width: 1vw;
+		}
+		::-webkit-scrollbar-thumb{
+		  	background: #68d2d4; 
+		  	border-radius: 5px;
 		}
 		#bg{
 			width: 120%;
@@ -13,65 +21,105 @@
 			z-index: -1;
 			top: -10%;
 			left: -7%;
+		}		
+		#logo{
+			float: left;
+			position: fixed;
+			right: 3%;
+			top: 3%;
+			width: 5%;
+			animation: logo 4s ease forwards;
+			z-index: 5;
+		}
+		@keyframes logo{
+			1%{width: 0%;}
+			100%{width: 5%;}
+		}
+		#images{
+			width: 100%;
+			height: auto;
+		}
+		#img1,#img2{ width: 20%; border-radius: 15%;float: left;position: absolute;transition: transform .2s;}
+		#img1:hover,#img2:hover {transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */}
+		#img1{
+			margin-left: 20%;animation: img1 4s ease forwards;
+		}
+		#img2{
+			margin-left: 60%; animation: img2 4s ease forwards;
+		}
+		@keyframes img1{
+			50%{transform: translateX(-15%) translateY(-10%);}
+			100%{transform: translateX(0%);}
+		}
+		@keyframes img2{
+			50%{transform: translateX(15%) translateY(10%);}
+			100%{transform: translateX(0%);}
+		}
+		#text{
+			float: left;
+			position: absolute;
+			font-size: 2vw;
+			width: 80%;
+			margin-left: 10%;
+			animation: h1 4s ease forwards;
+		}
+		p{
+			font-weight: bolder;
+
+		}
+		h1,h2{
+			text-align: center;
+			text-shadow: 1px 1px 4px aqua;
+			animation: h1 4s ease forwards;
+		}
+		@keyframes h1{
+			0%{transform: translateY(10px); color: transparent; text-shadow: none;}
+			10%{color: transparent; text-shadow: none;}
+			11%{letter-spacing: -4px;text-shadow: none;}
+			12%{letter-spacing: -2px;text-shadow: none;}
+			90%{text-shadow: none;}
+			100%{letter-spacing: 2px;}
 		}
 	</style>
 </head>
 <body>
+<div id="logo"><a href="index.html"><img src="logo.png" style="border-radius: 50%; width: 100%"></a></div>
 <img id="bg" src="test.jpg"> <!-- bg piture -->
-<h1>EIKO v.3</h1><h2>Our Newest Model Design</h2>
+<h1 style="font-size: 4vw;">EIKO v.3</h1><h2 style="font-size: 3.5vw;">Our Newest Model Design</h2>
 <br>
-<div>
-	Main Functions:
-	<br>
+<div id="images">
+	<img src="front.jpeg" id="img1">
+	<img src="back.jpeg" id="img2">
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="text">
+	<p>Main Functions:</p>
 	 - Environmental Use 
 	<br>
 	 - Industrial Application 
 	<br>
-	 - Medical Application   
-	<br>
-	<br>
-	Eiko 3 has a chip that must be inserted into his core processor slot in order for it to perform its three primary functions.   
-	<br>
-	<br>
-	Main Parts:
-	<br> 
+	 - Medical Application
+	<p>Eiko 3 has a chip that must be inserted into his core processor slot in<br>order for it to perform its three primary functions.<br><br>
+	Main Parts:</p>
 	 - Sensors 
 	<br>
 	 - Effectors
 	<br>
 	 - Main System
+	<p>More Parts:</p>
+	 - Core Processor Slot
+	<br>
+	 - Trash Bag
 	<br> 
+	 - Monitor
 	<br>
-	More Parts:
+	 - Sensor
 	<br>
-	 - Core Processor Slot 
-	 - Trash Bag 
-	 - Monitor 
-	 - Sensor 
 	 - Backpack
+	<br>
+	<h4 style="text-align: justify;">NOTE: EIKO is not suitable for performing complex procedures such as surgical, autopsy, puncture, or penetration wounds. We still recommend that you consult with your doctor.</h4>
 </div>
-
-<a href="index.html">Back to Main Page</a>
+<a href="index.html" style="float: left;position: absolute; margin-left: 80%;margin-top:63%; color: white; text-decoration: none; font-size: 2vw; animation: h1 4s ease forwards;">Back to Main Page</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-<!--
-	<style>
-.zoom {
-  padding: 50px;
-  background-color: green;
-  transition: transform .2s; /* Animation */
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-
-.zoom:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-</style>
-
-<div class="zoom"></div>
--->
